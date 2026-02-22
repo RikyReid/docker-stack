@@ -31,10 +31,10 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
       
-#    - name: Build Docker image
-#      run: |
-#        docker build -t demo-app:${{ github.sha }} .
-#        docker tag demo-app:${{ github.sha }} demo-app:latest
+    - name: Build Docker image
+      run: |
+        docker build -t demo-app:${{ github.sha }} .
+        docker tag demo-app:${{ github.sha }} demo-app:latest
         
     # Optional: Push to Docker Hub (uncomment and configure)
     # - name: Log in to Docker Hub
